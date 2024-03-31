@@ -132,8 +132,14 @@ class App {
     await this.page.type('input[type=email]', config.TODOIST_EMAIL)
     await this.page.type('input[type=password]', config.TODOIST_PASSWORD)
     
-    await this.page.click('button[type=submit]'),
-    await this.page.waitForNavigation({ waitUntil: 'networkidle2'})
+    try {
+      await this.page.click('button[type=submit]'),
+      await this.page.waitForNavigation({ waitUntil: 'networkidle2'})
+    } catch(e) {
+      this.logger.error('Something went wrong while trying to ')
+      this.logger.error(e);
+      this.end()
+    }
   }
 
   async end(){
