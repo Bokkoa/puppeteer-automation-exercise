@@ -6,20 +6,25 @@
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Felipe Cruz",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "puppeteer": "^22.6.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "winston": "^3.13.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
+    "jest": "^29.7.0",
+    "jest-puppeteer": "^10.0.1",
+    "puppeteer": "^22.6.1",
+    "ts-jest": "^29.1.2",
     "typescript": "^5.4.3"
   }
 }

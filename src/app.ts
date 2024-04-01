@@ -83,7 +83,7 @@ class App {
       } break;
 
       default: {
-        this.logger.error(`${siteLanguage} Language not supported using 'en' as defaul`)
+        this.logger.error(`${siteLanguage} Language not supported using 'en' as default`)
         this.langText = CurrentLang.en
       }
     }
@@ -136,6 +136,7 @@ class App {
       await this.page.click('button[type=submit]'),
       await this.page.waitForNavigation({ waitUntil: 'networkidle2'})
     } catch(e) {
+
       this.logger.error('Something went wrong while trying to ')
       this.logger.error(e);
       this.end()
