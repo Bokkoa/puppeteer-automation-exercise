@@ -2,7 +2,7 @@ import { isEmptyString } from "./utils/isEmptyHandler";
 
 require('dotenv').config();
 
-if(isEmptyString(process.env.TODOIST_EMAIL ?? '')){
+if(isEmptyString(process.env.TODOIST_ACCOUNT ?? '')){
   throw new Error('No todoist account setted');
 }
 
@@ -14,6 +14,6 @@ export default {
   SOURCE_PAGE_URL: 'https://trello.com/b/QvHVksDa/personal-work-goals',
   TARGET_PAGE_URL: 'https://app.todoist.com/app/today',
   TODOIST_PASSWORD: process.env.TODOIST_PASSWORD!,
-  TODOIST_EMAIL: process.env.TODOIST_EMAIL!,
+  TODOIST_EMAIL: process.env.TODOIST_ACCOUNT!,
   HEADLESS_MODE: process.env.HEADLESS_MODE?.toLocaleLowerCase() === 'true',
 }
