@@ -17,7 +17,7 @@ This is a Pipeline Pattern for get Tasks from Trello board to Todoist as an exer
 | -------------   | ------------- | ------------- |
 | HEADLESS_MODE   | If its true, hiddes the puppeteer browser instance | true
 | TODOIST_PASSWORD | Credential for todoist login | password123 | 
-| TODOIST_EMAIL | Credential for todoist login | example@example.com |
+| TODOIST_ACCOUNT | Credential for todoist login | example@example.com |
 
 
 5. Run in dev mode with ``npm run dev``
